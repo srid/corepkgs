@@ -15,7 +15,6 @@ PLATFORMS=(
   armv7-unknown-linux-gnueabihf
   aarch64-unknown-linux-gnu
   aarch64-unknown-linux-musl
-  x86_64-apple-darwin
   aarch64-apple-darwin
   powerpc64-unknown-linux-gnu
   powerpc64le-unknown-linux-gnu

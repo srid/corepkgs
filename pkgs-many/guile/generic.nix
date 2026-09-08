@@ -91,8 +91,7 @@ builder (
         # See below.
         "--without-threads"
       ]
-      # At least on x86_64-darwin '-flto' autodetection is not correct:
-      #  https://github.com/NixOS/nixpkgs/pull/160051#issuecomment-1046193028
+      # '-flto' autodetection is not correct: https://github.com/NixOS/nixpkgs/pull/160051#issuecomment-1046193028
       ++ lib.optional (packageAtLeast "3.0" && stdenv.hostPlatform.isDarwin) "--disable-lto";
 
     depsBuildBuild = [

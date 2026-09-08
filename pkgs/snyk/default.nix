@@ -25,10 +25,6 @@ stdenvNoCC.mkDerivation {
           url = "https://downloads.snyk.io/cli/v${version}/snyk-linux-arm64";
           hash = "sha256-hCN88Bbuf9/xg6DXpY6GPjdlr4voTL6e2e7m6GnvpHY=";
         };
-        "x86_64-darwin" = fetchurl {
-          url = "https://downloads.snyk.io/cli/v${version}/snyk-macos";
-          hash = "sha256-kfvGg2LWySIhe+ce6u8yLAtOJg/GYLaWivr5AGjYfbY=";
-        };
         "aarch64-darwin" = fetchurl {
           url = "https://downloads.snyk.io/cli/v${version}/snyk-macos-arm64";
           hash = "sha256-rWYELWYrdPBq4OQi8HMhSW6lNjWF6FAYpcfHaxe3ET0=";
@@ -66,7 +62,6 @@ stdenvNoCC.mkDerivation {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
-      "x86_64-darwin"
       "aarch64-darwin"
     ];
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];

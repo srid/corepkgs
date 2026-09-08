@@ -119,7 +119,7 @@ stdenv.mkDerivation (finalAttrs: {
     xar
   ];
 
-  # ld built with this fails to link glib's gio on x86_64 darwin
+  # ld built with this fails to link glib's gio
   hardeningDisable = [ "libcxxhardeningfast" ];
 
   mesonFlags = [

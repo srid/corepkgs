@@ -404,7 +404,6 @@ stdenv.mkDerivation rec {
       "aarch64-linux"
       "x86_64-linux"
       "aarch64-darwin"
-      "x86_64-darwin"
     ];
     broken = optimizationLevel == "0"; # generates invalid code
   };

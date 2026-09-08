@@ -38,11 +38,9 @@ stdenv.mkDerivation {
     ./gnulib-float-h-tests-port-to-C23-PowerPC-GCC.patch
   ];
 
-  # Some gnulib tests fail
-  # - on Musl: https://github.com/NixOS/nixpkgs/pull/228714
-  # - on x86_64-darwin: https://github.com/NixOS/nixpkgs/pull/228714#issuecomment-1576826330
+  # Some gnulib tests fail on Musl: https://github.com/NixOS/nixpkgs/pull/228714
   postPatch =
-    if stdenv.hostPlatform.isMusl || (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isx86_64) then
+    if stdenv.hostPlatform.isMusl then
       ''
         sed -i 's:gnulib-tests::g' Makefile.in
       ''
@@ -67,9 +65,8 @@ stdenv.mkDerivation {
 
   # cygwin: FAIL: multibyte-white-space
   # freebsd: FAIL mb-non-UTF8-performance
-  # x86_64-darwin: fails 'stack-overflow' tests on Rosetta 2 emulator
   # aarch32: fails 'stack-overflow' when run on qemu under x86_64
-  # !stdenv.hostPlatform.isCygwin && !stdenv.hostPlatform.isFreeBSD && !(stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isx86_64) && !stdenv.buildPlatform.isRiscV64 && !stdenv.hostPlatform.isAarch32;
+  # !stdenv.hostPlatform.isCygwin && !stdenv.hostPlatform.isFreeBSD && !stdenv.buildPlatform.isRiscV64 && !stdenv.hostPlatform.isAarch32;
   doCheck = false; # TODO: enable in passhru
 
   # On macOS, force use of mkdir -p, since Grep's fallback

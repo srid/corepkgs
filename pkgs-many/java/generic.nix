@@ -34,8 +34,6 @@ let
       "linux-x64"
     else if stdenv.hostPlatform.system == "aarch64-linux" then
       "linux-aarch64"
-    else if stdenv.hostPlatform.system == "x86_64-darwin" then
-      "mac-x64"
     else if stdenv.hostPlatform.system == "aarch64-darwin" then
       "mac-aarch64"
     else
@@ -52,12 +50,7 @@ let
       else
         throw "Unsupported Linux architecture"
     else if stdenv.hostPlatform.isDarwin then
-      if stdenv.hostPlatform.isx86_64 then
-        "x64_mac"
-      else if stdenv.hostPlatform.isAarch64 then
-        "aarch64_mac"
-      else
-        throw "Unsupported macOS architecture"
+      if stdenv.hostPlatform.isAarch64 then "aarch64_mac" else throw "Unsupported macOS architecture"
     else
       throw "Unsupported platform"
   }_hotspot_${version}_${build}.tar.gz";
@@ -157,7 +150,6 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
-      "x86_64-darwin"
       "aarch64-darwin"
     ];
     mainProgram = "java";

@@ -69,16 +69,10 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-KgKrqe0S5KxOs+qUIcQgMBoMZGDZgw10qd+H76SRIBA=";
   };
 
-  patches = [
-    # Disable `numpy/core/tests/test_umath.py::TestComplexFunctions::test_loss_of_precision[complex256]`
-    # on x86_64-darwin because it fails under Rosetta 2 due to issues with trig functions and
-    # 80-bit long double complex numbers.
-    ./disable-failing-long-double-test-Rosetta-2.patch
-  ]
   # We patch cpython/distutils to fix https://bugs.python.org/issue1222585
   # Patching of numpy.distutils is needed to prevent it from undoing the
   # patch to distutils.
-  ++ lib.optionals python.hasDistutilsCxxPatch [ ./numpy-distutils-C++.patch ];
+  patches = lib.optionals python.hasDistutilsCxxPatch [ ./numpy-distutils-C++.patch ];
 
   postPatch = ''
     # fails with multiple errors because we are not using the pinned setuptools version
@@ -169,10 +163,6 @@ buildPythonPackage (finalAttrs: {
   ]
   ++ lib.optionals stdenv.hostPlatform.isAarch64 [
     "test_big_arrays" # OOM on a 16G machine
-  ]
-  ++ lib.optionals (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isx86_64) [
-    # can fail on virtualized machines confused over their cpu identity
-    "test_dispatcher"
   ];
 
   passthru = {

@@ -3,7 +3,6 @@ callPackage ./binary.nix {
   version = "1.22.12";
   hashes = {
     # Use `print-hashes.sh ${version}` to generate the list below
-    darwin-amd64 = "e7bbe07e96f0bd3df04225090fe1e7852ed33af37c43a23e16edbbb3b90a5b7c";
     darwin-arm64 = "416c35218edb9d20990b5d8fc87be655d8b39926f15524ea35c66ee70273050d";
     freebsd-386 = "85b00f8646e84be6ce51c753d22b68a5f4d5bbfc6a82c8ca9e7489c0c5a619d8";
     freebsd-amd64 = "a8c77e76859db3e6f3322cbe11deea5faf779e374f45df7554d2cb484ffa492a";

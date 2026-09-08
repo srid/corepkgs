@@ -25,7 +25,6 @@ let
         {
           "aarch64-darwin" = "darwin-aarch64";
           "aarch64-linux" = "linux-aarch64";
-          "x86_64-darwin" = "darwin-x64-baseline";
           "x86_64-linux" = "linux-x64";
         }
         .${system};
@@ -47,7 +46,6 @@ stdenvNoCC.mkDerivation {
   sourceRoot =
     {
       aarch64-darwin = "bun-darwin-aarch64";
-      x86_64-darwin = "bun-darwin-x64-baseline";
     }
     .${stdenvNoCC.hostPlatform.system} or null;
 
@@ -72,18 +70,12 @@ stdenvNoCC.mkDerivation {
   '';
 
   postPhases = [ "postPatchelf" ];
-  postPatchelf =
-    lib.optionalString
-      (
-        stdenvNoCC.buildPlatform.canExecute stdenvNoCC.hostPlatform
-        && !(stdenvNoCC.hostPlatform.isDarwin && stdenvNoCC.hostPlatform.isx86_64)
-      )
-      ''
-        installShellCompletion --cmd bun \
-          --bash <(SHELL="bash" $out/bin/bun completions) \
-          --zsh <(SHELL="zsh" $out/bin/bun completions) \
-          --fish <(SHELL="fish" $out/bin/bun completions)
-      '';
+  postPatchelf = lib.optionalString (stdenvNoCC.buildPlatform.canExecute stdenvNoCC.hostPlatform) ''
+    installShellCompletion --cmd bun \
+      --bash <(SHELL="bash" $out/bin/bun completions) \
+      --zsh <(SHELL="zsh" $out/bin/bun completions) \
+      --fish <(SHELL="fish" $out/bin/bun completions)
+  '';
 
   meta = {
     homepage = "https://bun.sh";

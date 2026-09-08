@@ -40,7 +40,6 @@
   isCCTools ? bintools.isCCTools or false,
   expand-response-params,
   targetPackages ? { },
-  wrapGas ? false,
 
   # Note: the hardening flags are part of the bintools-wrapper, rather than
   # the cc-wrapper, because a few of them are handled by the linker.
@@ -238,18 +237,6 @@ stdenvNoCC.mkDerivation {
         wrap ld-solaris ${./ld-solaris-wrapper.sh}
       ''
   )
-
-  # If we are asked to wrap `gas` and this bintools has it,
-  # then symlink it (`as` will be symlinked next).
-  # This is mainly for the wrapped gnat-bootstrap on x86-64 Darwin,
-  # as it must have both the GNU assembler from cctools (installed as `gas`)
-  # and the Clang integrated assembler (installed as `as`).
-  # See pkgs/os-specific/darwin/binutils/default.nix for details.
-  + optionalString wrapGas ''
-    if [ -e $ldPath/${targetPrefix}gas ]; then
-      ln -s $ldPath/${targetPrefix}gas $out/bin/${targetPrefix}gas
-    fi
-  ''
 
   # Create symlinks for rest of the binaries.
   + ''

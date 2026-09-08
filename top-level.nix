@@ -323,7 +323,6 @@ with final;
     bootstrap_cmds = null;
     signingUtils = null;
     configd = null;
-    binutilsDualAs-unwrapped = null;
   };
   autoSignDarwinBinariesHook = null;
   DarwinTools = null;
@@ -582,11 +581,6 @@ with final;
   };
   bintools = wrapBintoolsWith {
     bintools = bintools-unwrapped;
-  };
-
-  bintoolsDualAs = wrapBintoolsWith {
-    bintools = darwin.binutilsDualAs-unwrapped;
-    wrapGas = true;
   };
 
   xorg =

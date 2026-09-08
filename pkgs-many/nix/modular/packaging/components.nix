@@ -119,8 +119,6 @@ let
             !stdenv.hostPlatform.isWindows
             # build failure
             && !stdenv.hostPlatform.isStatic
-            # LTO breaks exception handling on x86-64-darwin.
-            && stdenv.system != "x86_64-darwin"
           )
           (
             lib.mesonBool "b_lto" (

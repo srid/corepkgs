@@ -67,9 +67,7 @@ let
   arch =
     if stdenv.hostPlatform.system == "i686-linux" then
       "i686"
-    else if
-      stdenv.hostPlatform.system == "x86_64-linux" || stdenv.hostPlatform.system == "x86_64-darwin"
-    then
+    else if stdenv.hostPlatform.system == "x86_64-linux" then
       "x86-64"
     else if stdenv.hostPlatform.system == "armv7l-linux" then
       "armv7l"

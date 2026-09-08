@@ -502,8 +502,6 @@ stdenv.mkDerivation (finalAttrs: {
     # fail (as of 2.33.0)
     #===(   18623;1208  8/?  224/?  2/? )= =fatal: Not a valid object name refs/tags/signed-empty
     disable_test t6300-for-each-ref
-    # not ok 1 - populate workdir (with 2.33.1 on x86_64-darwin)
-    disable_test t5003-archive-zip
   ''
   + lib.optionalString (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64) ''
     disable_test t7527-builtin-fsmonitor

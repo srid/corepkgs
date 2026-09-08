@@ -18,7 +18,6 @@ const librusty_v8 = `${denoDir}/librusty_v8.nix`;
 const architectures: Architecture[] = [
   { nix: "x86_64-linux", rust: "x86_64-unknown-linux-gnu" },
   { nix: "aarch64-linux", rust: "aarch64-unknown-linux-gnu" },
-  { nix: "x86_64-darwin", rust: "x86_64-apple-darwin" },
   { nix: "aarch64-darwin", rust: "aarch64-apple-darwin" },
 ];
 

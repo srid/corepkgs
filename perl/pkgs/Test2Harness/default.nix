@@ -52,6 +52,5 @@ buildPerlPackage rec {
     changelog = "https://github.com/Test-More/Test2-Harness/blob/v${version}/Changes";
     description = "New and improved test harness with better Test2 integration";
     mainProgram = "yath";
-    broken = stdenv.hostPlatform.isDarwin; # never built on Hydra https://hydra.nixos.org/job/nixpkgs/staging-next/perl534Packages.Test2Harness.x86_64-darwin
   };
 }

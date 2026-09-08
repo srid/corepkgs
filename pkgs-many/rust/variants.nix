@@ -13,7 +13,6 @@
       armv7-unknown-linux-gnueabihf = "c51a61f304c0019c57169b964ec26f7a7ff7dcefaf42b973237f96fb457b25c8";
       aarch64-unknown-linux-gnu = "50213385f288b8760b2efd54ac066ef9a76475e778cbe3b0fcbd3f898fc00674";
       aarch64-unknown-linux-musl = "d374258cd00b4069e44266ab58b321208187511606236ebcc791a5a2d86554e1";
-      x86_64-apple-darwin = "05adbd08e6535ed22a9c3d8f11d90df51eb6393488cbbb0c81f2b18d56e4d1ee";
       aarch64-apple-darwin = "f6727c9ab64a5b2a15623f29a023faf0c6a6aeb1347d102b88d595e5c1d9beae";
       powerpc64-unknown-linux-gnu = "94d86d13af288c4a06c8ea8b563e3889d55cc6064a06defd3b612eeeda902b93";
       powerpc64le-unknown-linux-gnu = "355f8043cd506fa718892eeedeebc9d6cc3de1a7757fdb8385c7bdc4cbc853ac";
@@ -41,7 +40,6 @@
       armv7-unknown-linux-gnueabihf = "1c0f84532a91f3ce7223613565f15f8992a8e09859d699c163a7782d15d6beef";
       aarch64-unknown-linux-gnu = "c812028423c3d7dd7ba99f66101e9e1aa3f66eab44a1285f41c363825d49dca4";
       aarch64-unknown-linux-musl = "ad412daf7b31aadbeb12f836ed14983f5d1d0717bd444e305f94ee68ea822fcd";
-      x86_64-apple-darwin = "fc6868991e61e9262272effbb8956b23428430f5f4300c1b48eaae3969f8af2a";
       aarch64-apple-darwin = "235a6cca2dd4881130a9ae61ad1149bbf28bba184dd4621700f0c98c97457716";
       powerpc64-unknown-linux-gnu = "189dd8a254202d32066f123b42497b88f809a11680842e67c68e48a4200b6caf";
       powerpc64le-unknown-linux-gnu = "e2fe00a3c91f21c52947ebf96b4da016c9def5ccfedd1c335f30746db58bbf35";
@@ -69,7 +67,6 @@
       armv7-unknown-linux-gnueabihf = "0177f471c457b0a29ff81bf99d1078b676d652e6a7ebb31dfbeceb63a274e38c";
       aarch64-unknown-linux-gnu = "bbe822f0aae2c1d31fa950a78446d4749e07ed67e974f87bf0c69146df2a9d9c";
       aarch64-unknown-linux-musl = "859d2e973ba1b0106aaeb5df7db72673cb82b9de417339e28ae9b5074756db5b";
-      x86_64-apple-darwin = "5d4bd3705d6cb005449a22aa74ac073886a0e6a6026d2fc24d53b0acaca60255";
       aarch64-apple-darwin = "6bafa3b5367019c576751741295e06717f8f28c9d0e6631dcb9496cd142a386a";
       powerpc64-unknown-linux-gnu = "1b7869988be45153d86703c9ef4c970053b251745ac1571831dcd5f52d512cbf";
       powerpc64le-unknown-linux-gnu = "59dfda4a3ba76113406ce80c802161ec669da49d5b7c0214abc5b99bff633e39";
@@ -97,7 +94,6 @@
       armv7-unknown-linux-gnueabihf = "31b7deb5f38a504e21865a8bd98ff546884e66910ee11ed55e51a976ac7a645a";
       aarch64-unknown-linux-gnu = "99dba6decb780158b2b94f0054ec15c8cd4a04a497c84349fb86fb7a70722c78";
       aarch64-unknown-linux-musl = "caa1d50676518532cc9b4c4c491f219edbdcb9ebf9e6624432b5b43b87d8cc0a";
-      x86_64-apple-darwin = "6d9c5a4bf9962987d616417e2669a50b52cc7ecbfa682d56e9ce8244a57d7b60";
       aarch64-apple-darwin = "630349bd157632ff65aafd1b5753e6a09153278cdac8196e8678b40b30cf1ecb";
       powerpc64-unknown-linux-gnu = "ef5ece383b3b0c2e3b020b95420020b247d73e6885cc9d8b328456b84cfcb6e6";
       powerpc64le-unknown-linux-gnu = "e4375d9081ce229786849ac4cd1be56e3a4ff117371d557ebcdb832c5ec20a4e";
@@ -124,7 +120,6 @@
       armv7-unknown-linux-gnueabihf = "23a201e72c082c285e957a32b40e1c30805b15d344b84b984be3659e9aefadf6";
       aarch64-unknown-linux-gnu = "3b9385d3144ac57616befa0ccbac524f857ba1b4ab074226e73a24d43568a98e";
       aarch64-unknown-linux-musl = "ad35bcc6928ccb4fd8a12fe19ce88c8fb6e6e3690578a0cb4e0839008017484f";
-      x86_64-apple-darwin = "3f3d9f29f8eb7aa821bd8531cb9b1c3c74c3976aa558dfabfcc15c2febb3cfb8";
       aarch64-apple-darwin = "ec23ad2e0e15a7397d2c3c232356149cc871b7df7f47e25c2acb1070157f5398";
       powerpc64-unknown-linux-gnu = "6d89e3739cfb7b3a05880734513361d5860492385217dcd166d033f3e974e823";
       powerpc64le-unknown-linux-gnu = "29e3430f38406c926ee24ff911357dba0c46ff1d3ea59e91625b03677bd51b30";
@@ -151,7 +146,6 @@
       armv7-unknown-linux-gnueabihf = "59320d46850c750b0a0d3e49939c00c3eed9917fab9a633300fb4d04bd8cfebc";
       aarch64-unknown-linux-gnu = "212cebf45b0669b2176eb08ffa17c90b07f9de2689d6aae3604d78699fa4f5c2";
       aarch64-unknown-linux-musl = "9e936f24cfd76db8a45ab352919336978531c0fb4eab7a7bdecc76b9562fcbdb";
-      x86_64-apple-darwin = "c19cc27b3387e2dfe7eb4b5becc75ab5acf348b2a7f2142ad3716d93a0abaa2a";
       aarch64-apple-darwin = "c080e506af9cba3ca9472c17d989c2d8d5bcfc818eb5e196c77beee982788b50";
       powerpc64-unknown-linux-gnu = "7133e2e1ccf0eb66c4feeca8a2bbf21ad3223904a3459b3f228ff7c8dfc76871";
       powerpc64le-unknown-linux-gnu = "4cde26acb968f98fdb2f7f52e7f78b75a24afdea38abed7217e1cd02c6acbe06";
@@ -178,7 +172,6 @@
       armv7-unknown-linux-gnueabihf = "e89c5e33aaddc6ef56857000c9117875c2997e9a1a500bd7b16277c9874b002f";
       aarch64-unknown-linux-gnu = "2f2496c70bd336a66a4c8baf2d303ba161f3552f192444c3639ba903c7c1e2c5";
       aarch64-unknown-linux-musl = "c5f45b5c6eb7f8fdb277c54c08402b7c931516740fbd4eccc26ba148f7cd5d57";
-      x86_64-apple-darwin = "5f4c84d2bcce7983468642855a45fc4978fba1324cfdd1ea0b182face3ab4ffa";
       aarch64-apple-darwin = "cbd14c36f039f6f11f38148a6295d8234d18ddf20bea53031c86f119423a8b26";
       powerpc64-unknown-linux-gnu = "2b507d5eb9b5c4c041b50e93e069db56d094f02e6df103dc74c016155141bfae";
       powerpc64le-unknown-linux-gnu = "ff524eef5a59d801df09ccad5cdaf9ea1f0a07d75cbed2a7e9f013a9eb76a3c1";
@@ -205,7 +198,6 @@
       armv7-unknown-linux-gnueabihf = "fe4b4ad389108c8b90ae77ed66b62073468a77892483bc11d2be570b64b866db";
       aarch64-unknown-linux-gnu = "5fbb4282403046d52a4672765c6761a809bf9f33e699b17e6eb7a93ab7770cc3";
       aarch64-unknown-linux-musl = "c26e37bb6f20e49498c552e53e3f34871ba2f7610c7f8b2cce38a48e3570c7de";
-      x86_64-apple-darwin = "66f4e2e17275753deaba8437380de21072b56b5a083cf954bacb6376df0834fc";
       aarch64-apple-darwin = "026ec75bec81fb8c10b11df98f1336ee39f4bc11e04d6745dffe9fca81e5c0b5";
       powerpc64-unknown-linux-gnu = "7ed997cfa306e503362129334e58aebe3b2db9bf2b75a96803636d4098db9ca7";
       powerpc64le-unknown-linux-gnu = "c20df5c7133492efc4a5e66f9a41aef3dcb50d2a0d8acef98e635ab1c3e49fdb";

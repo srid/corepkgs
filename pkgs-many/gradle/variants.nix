@@ -22,7 +22,6 @@
       "aarch64-linux"
       "i686-windows"
       "x86_64-cygwin"
-      "x86_64-darwin"
       "x86_64-linux"
       "x86_64-windows"
     ];
@@ -41,7 +40,6 @@
       "aarch64-linux"
       "i686-windows"
       "x86_64-cygwin"
-      "x86_64-darwin"
       "x86_64-linux"
       "x86_64-windows"
     ];
@@ -60,7 +58,6 @@
       "aarch64-linux"
       "i686-windows"
       "x86_64-cygwin"
-      "x86_64-darwin"
       "x86_64-linux"
       "x86_64-windows"
     ];

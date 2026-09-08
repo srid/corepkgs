@@ -162,10 +162,6 @@ buildPythonPackage rec {
     "test_big_arrays" # ValueError: array is too big; `arr.size * arr.dtype.itemsize` is larger tha...
     "test_multinomial_pvals_float32" # Failed: DID NOT RAISE <class 'ValueError'>
   ]
-  ++ lib.optionals (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isx86_64) [
-    # AssertionError: (np.int64(0), np.longdouble('9.9999999999999994515e-21'), np.longdouble('3.9696755572509052902e+20'), 'arctanh')
-    "test_loss_of_precision"
-  ]
   ++ lib.optionals (stdenv.hostPlatform.isPower64 && stdenv.hostPlatform.isBigEndian) [
     # https://github.com/numpy/numpy/issues/29918
     "test_sq_cases"
